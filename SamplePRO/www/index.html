@@ -28,6 +28,42 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <script>
+            function showalert() {
+                alert("hello");
+                window.location = "Html.html";
+                function backKeyDown() {
+                    // do something here if you wish
+                     alert('go back!');
+                }
+            }
+            function back() {
+                window.location = "back.html";
+            }
+            function firstfun() {
+                window.location = "first.html";
+            }
+
+            function page() {
+                window.location = "page2.html";
+            }
+
+            //function onBackKeyDown(e) {
+            //    e.preventDefault();
+            //    navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No"); 
+            //    // Prompt the user with the choice
+            //}
+
+            //function onConfirm(button) {
+            //    if (button == 2) {//If User selected No, then we just do nothing
+            //        return;
+            //    } else {
+            //        navigator.app.exitApp();// Otherwise we quit the app.
+            //    }
+            //}
+        </script>
+         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
         <div class="app">
@@ -37,8 +73,13 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <input type="button" value="click" onclick="showalert()"/>
+
+        <input type="button" value="click" onclick="back()"/>
+        <input type="button" value="first" onclick="firstfun()"/>
+        <input type="button" value="page2" onclick="page()"/>
+       
+       
         <script type="text/javascript">
             app.initialize();
         </script>
